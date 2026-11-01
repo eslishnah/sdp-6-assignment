@@ -1,0 +1,56 @@
+{
+  "type": "hotel",
+  "id": "hotel",
+  "name": "Astana Hotel",
+  "children": [
+    {
+      "type": "floor",
+      "id": "F1",
+      "name": "First floor",
+      "children": [
+        {
+          "type": "standardRoom",
+          "id": "101",
+          "name": "Room 101",
+          "dailyRate": 20000,
+          "cleaningMinutes": 20
+        },
+        {
+          "type": "suite",
+          "id": "102",
+          "name": "Suite 102",
+          "dailyRate": 40000,
+          "cleaningMinutes": 40
+        }
+      ]
+    },
+    {
+      "type": "floor",
+      "id": "F2",
+      "name": "Second floor",
+      "children": [
+        {
+          "type": "conferenceHall",
+          "id": "201",
+          "name": "Conference hall",
+          "dailyRate": 60000,
+          "cleaningMinutes": 60
+        },
+        {
+          "type": "restaurant",
+          "id": "202",
+          "name": "Restaurant",
+          "dailyRate": 80000,
+          "cleaningMinutes": 50
+        },
+        {
+          "type": "spa",
+          "id": "203",
+          "name": "Spa",
+          "dailyRate": 30000,
+          "cleaningMinutes": 30
+        }
+      ]
+    }
+  ]
+}

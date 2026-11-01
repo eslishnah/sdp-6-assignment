@@ -52,6 +52,7 @@ public class Main {
                     case "1" -> {
                         var snapshot = states.snapshot();
                         System.out.println("Daily revenue: " + hotel.accept(new RevenueVisitor(snapshot)) + " KZT");
+                        System.out.println("Cleaning cost (100 KZT/min): " + hotel.accept(new CleaningCostVisitor(snapshot, 100)));
                         System.out.println("Occupancy: " + hotel.accept(new OccupancyVisitor(snapshot)));
                         System.out.println("Cleaning: " + hotel.accept(new CleaningFilterVisitor(snapshot)).stream().map(Space::id).toList());
                     }

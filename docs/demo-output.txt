@@ -1,0 +1,48 @@
+
+1 Reports | 2 Checkout 101 | 3 Toggle guest listener | 4 Book 101
+5 Concurrent demo | 6 JSON | 7 Event log | 0 Exit
+Daily revenue: 110000 KZT
+Cleaning cost (100 KZT/min): 9000
+Occupancy: Summary[total=5, occupied=3, dirty=3, cleaningMinutes=150]
+Cleaning: [102, 202]
+
+1 Reports | 2 Checkout 101 | 3 Toggle guest listener | 4 Book 101
+5 Concurrent demo | 6 JSON | 7 Event log | 0 Exit
+Guest notifications: 1
+
+1 Reports | 2 Checkout 101 | 3 Toggle guest listener | 4 Book 101
+5 Concurrent demo | 6 JSON | 7 Event log | 0 Exit
+Guest listener subscribed: false
+
+1 Reports | 2 Checkout 101 | 3 Toggle guest listener | 4 Book 101
+5 Concurrent demo | 6 JSON | 7 Event log | 0 Exit
+Guest notifications: 1
+
+1 Reports | 2 Checkout 101 | 3 Toggle guest listener | 4 Book 101
+5 Concurrent demo | 6 JSON | 7 Event log | 0 Exit
+Guest listener subscribed: true
+
+1 Reports | 2 Checkout 101 | 3 Toggle guest listener | 4 Book 101
+5 Concurrent demo | 6 JSON | 7 Event log | 0 Exit
+Checkout recorded; floor F1 inspected.
+
+1 Reports | 2 Checkout 101 | 3 Toggle guest listener | 4 Book 101
+5 Concurrent demo | 6 JSON | 7 Event log | 0 Exit
+HotelEvent[type=BOOKING_CREATED, floorId=F1, spaceId=101, details=[], count=1]
+HotelEvent[type=BOOKING_CREATED, floorId=F1, spaceId=101, details=[], count=1]
+HotelEvent[type=ACTIVITY_SUMMARY, floorId=F1, spaceId=, details=[], count=2]
+HotelEvent[type=ROOM_CHANGED, floorId=F1, spaceId=101, details=[], count=1]
+HotelEvent[type=CLEANING_REPORT, floorId=F1, spaceId=101, details=[101, 102], count=2]
+Front desk updates: 4
+
+1 Reports | 2 Checkout 101 | 3 Toggle guest listener | 4 Book 101
+5 Concurrent demo | 6 JSON | 7 Event log | 0 Exit
+3 producers completed; pool threads: 3; new log entries: 6
+
+1 Reports | 2 Checkout 101 | 3 Toggle guest listener | 4 Book 101
+5 Concurrent demo | 6 JSON | 7 Event log | 0 Exit
+{"type":"hotel","id":"hotel","name":"Astana Hotel","children":[{"type":"floor","id":"F1","name":"First floor","children":[{"type":"standardRoom","id":"101","name":"Room 101","dailyRate":20000,"cleaningMinutes":20},{"type":"suite","id":"102","name":"Suite 102","dailyRate":40000,"cleaningMinutes":40}]},{"type":"floor","id":"F2","name":"Second floor","children":[{"type":"conferenceHall","id":"201","name":"Conference hall","dailyRate":60000,"cleaningMinutes":60},{"type":"restaurant","id":"202","name":"Restaurant","dailyRate":80000,"cleaningMinutes":50},{"type":"spa","id":"203","name":"Spa","dailyRate":30000,"cleaningMinutes":30}]}]}
+
+1 Reports | 2 Checkout 101 | 3 Toggle guest listener | 4 Book 101
+5 Concurrent demo | 6 JSON | 7 Event log | 0 Exit
+Goodbye. Listener failures: 0

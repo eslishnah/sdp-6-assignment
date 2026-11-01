@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1080" viewBox="0 0 1000 1080">
+<rect x="0" y="0" width="1000" height="1080" fill="white"/>
+<text x="30" y="25" font-family="Arial" font-size="24" font-weight="bold" fill="black">Observer</text>
+<text x="30" y="415" font-family="Arial" font-size="24" font-weight="bold" fill="black">Visitor and hotel structure</text>
+<polyline points="160,205 160,125" fill="none" stroke="black" stroke-width="1.7" stroke-dasharray="7 5"/>
+<polygon points="160,125 153.0,138.0 167.0,138.0" fill="white" stroke="black" stroke-width="1.7"/>
+<polyline points="365,245 290,245" fill="none" stroke="black" stroke-width="1.7"/>
+<polygon points="290,245 303.0,252.0 303.0,238.0" fill="white" stroke="black" stroke-width="1.7"/>
+<polyline points="495,205 495,165 740,165 740,125" fill="none" stroke="black" stroke-width="1.7" stroke-dasharray="7 5"/>
+<polygon points="740,125 733.0,138.0 747.0,138.0" fill="white" stroke="black" stroke-width="1.7"/>
+<polyline points="830,205 830,125" fill="none" stroke="black" stroke-width="1.7" stroke-dasharray="7 5"/>
+<polygon points="830,125 823.0,138.0 837.0,138.0" fill="white" stroke="black" stroke-width="1.7"/>
+<polyline points="290,230 325,230 325,85 700,85" fill="none" stroke="black" stroke-width="1.7" stroke-dasharray="7 5"/>
+<polyline points="688.0,79.0 700,85 688.0,91.0" fill="none" stroke="black" stroke-width="1.7"/>
+<text x="460" y="74" font-family="Arial" font-size="16" font-weight="normal" fill="black">notifies</text>
+<polyline points="830,285 830,350 160,350 160,450" fill="none" stroke="black" stroke-width="1.7" stroke-dasharray="7 5"/>
+<polyline points="166.0,438.0 160,450 154.0,438.0" fill="none" stroke="black" stroke-width="1.7"/>
+<text x="260" y="338" font-family="Arial" font-size="18" font-weight="normal" fill="black">uses CleaningFilterVisitor</text>
+<polyline points="700,490 290,490" fill="none" stroke="black" stroke-width="1.7" stroke-dasharray="7 5"/>
+<polyline points="302.0,496.0 290,490 302.0,484.0" fill="none" stroke="black" stroke-width="1.7"/>
+<text x="404" y="477" font-family="Arial" font-size="18" font-weight="normal" fill="black">accept / visit(this)</text>
+<polyline points="160,610 160,530" fill="none" stroke="black" stroke-width="1.7" stroke-dasharray="7 5"/>
+<polygon points="160,530 153.0,543.0 167.0,543.0" fill="white" stroke="black" stroke-width="1.7"/>
+<polyline points="160,770 160,690" fill="none" stroke="black" stroke-width="1.7"/>
+<polygon points="160,690 153.0,703.0 167.0,703.0" fill="white" stroke="black" stroke-width="1.7"/>
+<polyline points="830,610 830,530" fill="none" stroke="black" stroke-width="1.7" stroke-dasharray="7 5"/>
+<polygon points="830,530 823.0,543.0 837.0,543.0" fill="white" stroke="black" stroke-width="1.7"/>
+<polyline points="830,690 830,770" fill="none" stroke="black" stroke-width="1.7"/>
+<polygon points="830,690 835.0,698.0 830.0,706.0 825.0,698.0" fill="black" stroke="black"/>
+<text x="845" y="737" font-family="Arial" font-size="16" font-weight="normal" fill="black">0..*</text>
+<polyline points="830,850 830,930" fill="none" stroke="black" stroke-width="1.7"/>
+<polygon points="830,850 835.0,858.0 830.0,866.0 825.0,858.0" fill="black" stroke="black"/>
+<text x="845" y="897" font-family="Arial" font-size="16" font-weight="normal" fill="black">0..*</text>
+<rect x="30" y="45" width="260" height="80" fill="white" stroke="black" stroke-width="1.7"/>
+<text x="42" y="65" font-family="Arial" font-size="16" font-weight="normal" fill="black">&lt;&lt;interface&gt;&gt;</text>
+<text x="42" y="88" font-family="Arial" font-size="20" font-weight="bold" fill="black">Subject&lt;E&gt;</text>
+<line x1="30" y1="97" x2="290" y2="97" stroke="black"/>
+<text x="42" y="118" font-family="Arial" font-size="16" font-weight="normal" fill="black">subscribe / unsubscribe</text>
+<rect x="700" y="45" width="260" height="80" fill="white" stroke="black" stroke-width="1.7"/>
+<text x="712" y="65" font-family="Arial" font-size="16" font-weight="normal" fill="black">&lt;&lt;interface&gt;&gt;</text>
+<text x="712" y="88" font-family="Arial" font-size="20" font-weight="bold" fill="black">Observer&lt;E&gt;</text>
+<line x1="700" y1="97" x2="960" y2="97" stroke="black"/>
+<text x="712" y="118" font-family="Arial" font-size="16" font-weight="normal" fill="black">onEvent(event)</text>
+<rect x="30" y="205" width="260" height="80" fill="white" stroke="black" stroke-width="1.7"/>
+<text x="42" y="234" font-family="Arial" font-size="20" font-weight="bold" fill="black">ThreadSafeSubject&lt;E&gt;</text>
+<line x1="30" y1="245" x2="290" y2="245" stroke="black"/>
+<text x="42" y="266" font-family="Arial" font-size="16" font-weight="normal" fill="black">thread-safe event delivery</text>
+<rect x="365" y="205" width="260" height="80" fill="white" stroke="black" stroke-width="1.7"/>
+<text x="377" y="234" font-family="Arial" font-size="20" font-weight="bold" fill="black">ActivityAggregator</text>
+<line x1="365" y1="245" x2="625" y2="245" stroke="black"/>
+<text x="377" y="266" font-family="Arial" font-size="16" font-weight="normal" fill="black">onEvent / publish summary</text>
+<rect x="700" y="205" width="260" height="80" fill="white" stroke="black" stroke-width="1.7"/>
+<text x="712" y="234" font-family="Arial" font-size="20" font-weight="bold" fill="black">Housekeeping</text>
+<line x1="700" y1="245" x2="960" y2="245" stroke="black"/>
+<text x="712" y="266" font-family="Arial" font-size="16" font-weight="normal" fill="black">onEvent / floor report</text>
+<rect x="30" y="450" width="260" height="80" fill="white" stroke="black" stroke-width="1.7"/>
+<text x="42" y="470" font-family="Arial" font-size="16" font-weight="normal" fill="black">&lt;&lt;interface&gt;&gt;</text>
+<text x="42" y="493" font-family="Arial" font-size="20" font-weight="bold" fill="black">Visitor&lt;R&gt;</text>
+<line x1="30" y1="502" x2="290" y2="502" stroke="black"/>
+<text x="42" y="523" font-family="Arial" font-size="16" font-weight="normal" fill="black">visit(concrete element)</text>
+<rect x="700" y="450" width="260" height="80" fill="white" stroke="black" stroke-width="1.7"/>
+<text x="712" y="470" font-family="Arial" font-size="16" font-weight="normal" fill="black">&lt;&lt;interface&gt;&gt;</text>
+<text x="712" y="493" font-family="Arial" font-size="20" font-weight="bold" fill="black">HotelElement</text>
+<line x1="700" y1="502" x2="960" y2="502" stroke="black"/>
+<text x="712" y="523" font-family="Arial" font-size="16" font-weight="normal" fill="black">accept(visitor)</text>
+<rect x="30" y="610" width="260" height="80" fill="white" stroke="black" stroke-width="1.7"/>
+<text x="42" y="639" font-family="Arial" font-size="20" font-weight="bold" fill="black">WalkingVisitor&lt;R&gt;</text>
+<line x1="30" y1="650" x2="290" y2="650" stroke="black"/>
+<text x="42" y="671" font-family="Arial" font-size="16" font-weight="normal" fill="black">shared tree traversal</text>
+<rect x="700" y="610" width="260" height="80" fill="white" stroke="black" stroke-width="1.7"/>
+<text x="712" y="639" font-family="Arial" font-size="20" font-weight="bold" fill="black">Hotel</text>
+<line x1="700" y1="650" x2="960" y2="650" stroke="black"/>
+<text x="712" y="671" font-family="Arial" font-size="16" font-weight="normal" fill="black">children: List&lt;Floor&gt;</text>
+<rect x="30" y="770" width="260" height="80" fill="white" stroke="black" stroke-width="1.7"/>
+<text x="42" y="799" font-family="Arial" font-size="20" font-weight="bold" fill="black">CleaningFilterVisitor</text>
+<line x1="30" y1="810" x2="290" y2="810" stroke="black"/>
+<text x="42" y="831" font-family="Arial" font-size="16" font-weight="normal" fill="black">result: List&lt;Space&gt;</text>
+<rect x="700" y="770" width="260" height="80" fill="white" stroke="black" stroke-width="1.7"/>
+<text x="712" y="799" font-family="Arial" font-size="20" font-weight="bold" fill="black">Floor</text>
+<line x1="700" y1="810" x2="960" y2="810" stroke="black"/>
+<text x="712" y="831" font-family="Arial" font-size="16" font-weight="normal" fill="black">children: List&lt;Space&gt;</text>
+<rect x="700" y="930" width="260" height="80" fill="white" stroke="black" stroke-width="1.7"/>
+<text x="712" y="950" font-family="Arial" font-size="16" font-weight="normal" fill="black">&lt;&lt;interface&gt;&gt;</text>
+<text x="712" y="973" font-family="Arial" font-size="20" font-weight="bold" fill="black">Space</text>
+<line x1="700" y1="982" x2="960" y2="982" stroke="black"/>
+<text x="712" y="1003" font-family="Arial" font-size="16" font-weight="normal" fill="black">dailyRate / cleaningMinutes</text>
+<text x="30" y="895" font-family="Arial" font-size="17" font-weight="bold" fill="black">Sources extend ThreadSafeSubject:</text>
+<text x="30" y="922" font-family="Arial" font-size="17" font-weight="normal" fill="black">BookingSource, RoomStatusSource</text>
+<text x="30" y="965" font-family="Arial" font-size="17" font-weight="bold" fill="black">Space implementations:</text>
+<text x="30" y="992" font-family="Arial" font-size="17" font-weight="normal" fill="black">StandardRoom, Suite, ConferenceHall,</text>
+<text x="30" y="1019" font-family="Arial" font-size="17" font-weight="normal" fill="black">Restaurant, Spa</text>
+<text x="30" y="1060" font-family="Arial" font-size="16" font-weight="normal" fill="black">Core classes shown. Auxiliary classes and repeated relationships are omitted.</text>
+</svg>

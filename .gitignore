@@ -3,3 +3,5 @@ target/
 .vscode/
 *.iml
 *.log
+docs/Assignment_6_Report.pdf
+docs/report.md
