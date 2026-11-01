@@ -18,4 +18,5 @@ public abstract class WalkingVisitor<R> implements Visitor<R> {
     @Override public R visit(Suite suite) { inspect(suite); return result(); }
     @Override public R visit(ConferenceHall hall) { inspect(hall); return result(); }
     @Override public R visit(Restaurant restaurant) { inspect(restaurant); return result(); }
+    @Override public R visit(Spa spa) { inspect(spa); return result(); }
 }

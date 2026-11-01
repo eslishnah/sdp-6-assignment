@@ -11,7 +11,8 @@ public final class DemoData {
                 new Suite("102", "Suite 102", 40000, 40))),
             new Floor("F2", "Second floor", List.of(
                 new ConferenceHall("201", "Conference hall", 60000, 60),
-                new Restaurant("202", "Restaurant", 80000, 50)))));
+                new Restaurant("202", "Restaurant", 80000, 50),
+                new Spa("203", "Spa", 30000, 30)))));
     }
     public static RoomStateStore states() {
         RoomStateStore states = new RoomStateStore();
@@ -19,6 +20,7 @@ public final class DemoData {
         states.update("102", new RoomState(false, true));
         states.update("201", new RoomState(true, true));
         states.update("202", new RoomState(false, true));
+        states.update("203", new RoomState(true, false));
         return states;
     }
 }

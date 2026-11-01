@@ -7,4 +7,5 @@ public interface Visitor<R> {
     R visit(Suite suite);
     R visit(ConferenceHall hall);
     R visit(Restaurant restaurant);
+    R visit(Spa spa);
 }

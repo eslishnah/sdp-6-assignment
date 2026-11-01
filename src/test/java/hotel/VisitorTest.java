@@ -7,12 +7,12 @@ import java.util.*;
 import static org.junit.jupiter.api.Assertions.*;
 class VisitorTest {
     @Test void revenueMatchesHandCalculation() {
-        // Only 101 and 201 are occupied: 20,000 + 60,000 = 80,000 KZT.
-        assertEquals(80000L, DemoData.hotel().accept(new RevenueVisitor(DemoData.states().snapshot())));
+        // 101, 201 and 203: 20,000 + 60,000 + 30,000 = 110,000 KZT.
+        assertEquals(110000L, DemoData.hotel().accept(new RevenueVisitor(DemoData.states().snapshot())));
     }
     @Test void occupancyAccumulatesAcrossBothFloors() {
-        // 4 spaces, 2 occupied, 3 dirty; 40 + 60 + 50 = 150 cleaning minutes.
-        var expected = new OccupancyVisitor.Summary(4, 2, 3, 150);
+        // 5 spaces, 3 occupied, 3 dirty; 40 + 60 + 50 = 150 cleaning minutes.
+        var expected = new OccupancyVisitor.Summary(5, 3, 3, 150);
         assertEquals(expected, DemoData.hotel().accept(new OccupancyVisitor(DemoData.states().snapshot())));
     }
     @Test void filterExcludesOccupiedDirtyHall() {
@@ -29,7 +29,7 @@ class VisitorTest {
         assertEquals(List.of(), empty.accept(new CleaningFilterVisitor(Map.of())));
     }
     @Test void missingStateMeansAvailable() {
-        assertEquals(new OccupancyVisitor.Summary(4, 0, 0, 0),
+        assertEquals(new OccupancyVisitor.Summary(5, 0, 0, 0),
             DemoData.hotel().accept(new OccupancyVisitor(Map.of())));
     }
     @Test void treeDefensivelyCopiesChildren() {
@@ -56,7 +56,7 @@ class VisitorTest {
     }
     @Test void jsonContainsEveryLeafType() {
         String json = DemoData.hotel().accept(new JsonExportVisitor());
-        for (String type : List.of("standardRoom", "suite", "conferenceHall", "restaurant")) {
+        for (String type : List.of("standardRoom", "suite", "conferenceHall", "restaurant", "spa")) {
             assertTrue(json.contains("\"type\":\"" + type + "\""));
         }
         assertEquals("{\"type\":\"floor\",\"id\":\"F\",\"name\":\"Empty\",\"children\":[]}",

@@ -37,4 +37,5 @@ public class JsonExportVisitor implements Visitor<String> {
     @Override public String visit(Suite suite) { return leaf("suite", suite); }
     @Override public String visit(ConferenceHall hall) { return leaf("conferenceHall", hall); }
     @Override public String visit(Restaurant restaurant) { return leaf("restaurant", restaurant); }
+    @Override public String visit(Spa spa) { return leaf("spa", spa); }
 }
